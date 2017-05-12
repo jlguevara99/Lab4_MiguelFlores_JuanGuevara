@@ -17,6 +17,7 @@ public class Lab4_Miguel_Juan {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("l");
+        
     }
     
 }
