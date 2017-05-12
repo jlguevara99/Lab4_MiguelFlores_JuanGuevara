@@ -34,7 +34,6 @@ public class A_planta extends Complejo {
         return incriptado;
     }
 
-    @Override
     public String[][] cifrado_transposicion(String clave, String contraseña) {
         
     }

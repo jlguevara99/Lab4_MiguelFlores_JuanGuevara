@@ -11,6 +11,8 @@ package lab4_miguel_juan;
  */
 public class A_regionales extends Complejo{
 
+    private String nombre;
+    
     @Override
     public String[][] cifrado_riel(String x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

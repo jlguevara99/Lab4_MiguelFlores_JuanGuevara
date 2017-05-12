@@ -5,6 +5,7 @@
  */
 package lab4_miguel_juan;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -14,10 +15,13 @@ import java.util.Date;
 public class cliente extends Personas {
 
     private double presupuesto;
-    private Date primer_prdocto;
+    private Calendar primer_prdocto;
     private int cantidad_productos;
 
-    public cliente(double presupuesto, Date primer_prdocto, int cantidad_productos, String nombre, String id, int edad, double altura, double peso, String residencia) {
+    public cliente() {
+    }
+
+    public cliente(double presupuesto, Calendar primer_prdocto, int cantidad_productos, String nombre, String id, int edad, double altura, double peso, String residencia) {
         super(nombre, id, edad, altura, peso, residencia);
         this.presupuesto = presupuesto;
         this.primer_prdocto = primer_prdocto;
@@ -32,11 +36,11 @@ public class cliente extends Personas {
         this.presupuesto = presupuesto;
     }
 
-    public Date getPrimer_prdocto() {
+    public Calendar getPrimer_prdocto() {
         return primer_prdocto;
     }
 
-    public void setPrimer_prdocto(Date primer_prdocto) {
+    public void setPrimer_prdocto(Calendar primer_prdocto) {
         this.primer_prdocto = primer_prdocto;
     }
 
@@ -48,6 +52,7 @@ public class cliente extends Personas {
         this.cantidad_productos = cantidad_productos;
     }
 
+    
     @Override
     public String toString() {
         return "cliente{" + "presupuesto=" + presupuesto + ", primer_prdocto=" + primer_prdocto + ", cantidad_productos=" + cantidad_productos + '}';

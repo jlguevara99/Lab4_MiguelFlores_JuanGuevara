@@ -10,6 +10,7 @@ package lab4_miguel_juan;
  * @author HP
  */
 public class A_plataforma extends Complejo{
+<<<<<<< HEAD
 
     @Override
     public String[][] cifrado_riel(String x) {
@@ -45,5 +46,8 @@ public class A_plataforma extends Complejo{
     public String declaracion_alfabeto() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+=======
+    private int numeroPersonas;
+>>>>>>> 531b642d41b9ee89ca08802480a1e9aee4dc10f7
     
 }
