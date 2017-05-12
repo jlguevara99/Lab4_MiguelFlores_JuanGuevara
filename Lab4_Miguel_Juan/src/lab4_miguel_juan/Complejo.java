@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author HP
  */
-public class Complejo {
+public abstract class Complejo {
+
     private ArrayList empleados = new ArrayList();
     private ArrayList productos = new ArrayList();
     private double tamaño;
@@ -70,5 +71,19 @@ public class Complejo {
     public String toString() {
         return "Complejo{" + "empleados=" + empleados + ", productos=" + productos + ", tama\u00f1o=" + tamaño + ", altura=" + altura + ", clientes=" + clientes + '}';
     }
-    
+
+    public abstract String[][] cifrado_riel();
+
+    public abstract String[][] cifrado_transposicion();
+
+    public abstract String convercion_cadena_invercion();
+
+    public abstract double cifrado_vigenere();///
+
+    public abstract String adelantar_posiciones();
+
+    public abstract String[][] encriptacion_matrices();
+
+    public abstract String declaracion_alfabeto();
+
 }

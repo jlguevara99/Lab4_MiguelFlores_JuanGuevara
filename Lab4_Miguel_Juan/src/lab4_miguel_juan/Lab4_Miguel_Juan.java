@@ -5,11 +5,14 @@
  */
 package lab4_miguel_juan;
 
+<<<<<<< HEAD
+=======
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.InputMismatchException;
+>>>>>>> 531b642d41b9ee89ca08802480a1e9aee4dc10f7
 import java.util.Scanner;
 
 /**
@@ -25,6 +28,11 @@ public class Lab4_Miguel_Juan {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+<<<<<<< HEAD
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese");
+        int x = leer.nextInt();
+=======
 
         ArrayList<Empleado> empleados = new ArrayList();
 
@@ -128,6 +136,7 @@ public class Lab4_Miguel_Juan {
 
         } while (opcion != 6);
 
+>>>>>>> 531b642d41b9ee89ca08802480a1e9aee4dc10f7
     }
 
 }
