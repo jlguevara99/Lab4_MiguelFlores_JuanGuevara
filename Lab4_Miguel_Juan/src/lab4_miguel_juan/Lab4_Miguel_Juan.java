@@ -5,6 +5,8 @@
  */
 package lab4_miguel_juan;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HP
@@ -16,8 +18,9 @@ public class Lab4_Miguel_Juan {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("l");
-        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese");
+        int x = leer.nextInt();
     }
-    
+
 }
