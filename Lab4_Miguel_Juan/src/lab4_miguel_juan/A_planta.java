@@ -35,7 +35,20 @@ public class A_planta extends Complejo {
     }
 
     public String[][] cifrado_transposicion(String clave, String contraseña) {
-        
+        String[][] incriptado = new String[4][contraseña.length()];
+        int mitad = contraseña.length();
+        int contador = 0;
+        for (int i = 0; i < clave.length(); i++) {
+            char y = clave.charAt(i);
+            char x = contraseña.charAt(i);
+            incriptado[0][i] = "" + y;
+            int letra1 = y - 97;
+            incriptado[1][i] = "" + letra1;
+            incriptado[2][i] = "" + x;
+            int letra2 = (x) + letra1;
+            char new_letra = (char) letra2;
+            incriptado[3][i] = new_letra + "";
+        }
     }
 
     @Override
