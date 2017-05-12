@@ -53,7 +53,7 @@ public class cliente extends Personas {
         return "cliente{" + "presupuesto=" + presupuesto + ", primer_prdocto=" + primer_prdocto + ", cantidad_productos=" + cantidad_productos + '}';
     }
     
-    
+    //dsadsa
     
 
 }
