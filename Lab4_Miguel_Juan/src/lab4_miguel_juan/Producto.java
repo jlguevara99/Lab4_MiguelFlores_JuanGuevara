@@ -5,6 +5,7 @@
  */
 package lab4_miguel_juan;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  * @author HP
  */
 public class Producto {
-    private Date fecha;
+    private Calendar fecha;
     private int vida;
     private double precio;
     private double tamaño;
@@ -23,7 +24,7 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(Date fecha, int vida, double precio, double tamaño, String descripcion, String nombre, int numeroP) {
+    public Producto(Calendar fecha, int vida, double precio, double tamaño, String descripcion, String nombre, int numeroP) {
         this.fecha = fecha;
         this.vida = vida;
         this.precio = precio;
@@ -33,11 +34,11 @@ public class Producto {
         this.numeroP = numeroP;
     }
 
-    public Date getFecha() {
+    public Calendar getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(Calendar fecha) {
         this.fecha = fecha;
     }
 
