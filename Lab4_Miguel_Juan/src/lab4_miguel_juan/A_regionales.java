@@ -10,5 +10,6 @@ package lab4_miguel_juan;
  * @author HP
  */
 public class A_regionales extends Complejo{
+    private String nombre;
     
 }

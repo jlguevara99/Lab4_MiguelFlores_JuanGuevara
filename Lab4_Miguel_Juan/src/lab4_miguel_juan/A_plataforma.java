@@ -10,5 +10,6 @@ package lab4_miguel_juan;
  * @author HP
  */
 public class A_plataforma extends Complejo{
+    private int numeroPersonas;
     
 }
