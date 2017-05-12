@@ -35,11 +35,13 @@ public class Lab4_Miguel_Juan {
         boolean verdad = true;
         do {
             System.out.println("***MENU***");
-            System.out.println("1. Personas");
-            System.out.println("2. Productos");
-            System.out.println("3. Almacenes");
-            System.out.println("4. Modificar");
-            System.out.println("5. Eliminar");
+            System.out.println("1. Crear Personas");
+            System.out.println("2. Crear Productos");
+            System.out.println("3. Crear Almacenes");
+            System.out.println("4. Modificar Persona");
+            System.out.println("5. Eliminar Persona");
+            System.out.println("6. Modificar Producto");
+            System.out.println("7. Eliminar Poducto");
             System.out.println("6. Salir");
             opcion = sc.nextInt();
             switch (opcion) {
