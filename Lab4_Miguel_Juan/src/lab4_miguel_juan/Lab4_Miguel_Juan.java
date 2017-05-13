@@ -103,7 +103,7 @@ public class Lab4_Miguel_Juan {
                                         empleados.add(new empleado_seguridad(clave, diat, sueldo, nombre, id, edad, altura, peso, residencia));
                                         break;
                                 }
-
+//2
                                 break;
                             case 2:
                                 System.out.println("dinero en el bolsillo: ");
