@@ -13,16 +13,21 @@ import java.util.ArrayList;
  */
 public abstract class Complejo {
 
-    private ArrayList empleados = new ArrayList();
-    private ArrayList productos = new ArrayList();
+    private ArrayList empleados ;
+    private ArrayList productos;
     private double tamaño;
     private double altura;
-    private ArrayList clientes = new ArrayList();
+    private ArrayList clientes ;
 
-    public Complejo(double tamaño, double altura) {
+    public Complejo(ArrayList empleados, ArrayList productos, double tamaño, double altura, ArrayList clientes) {
+        this.empleados = empleados;
+        this.productos = productos;
         this.tamaño = tamaño;
         this.altura = altura;
+        this.clientes = clientes;
     }
+
+    
 
     public Complejo() {
     }

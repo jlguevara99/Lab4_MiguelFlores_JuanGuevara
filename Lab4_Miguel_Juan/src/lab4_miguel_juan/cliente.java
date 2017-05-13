@@ -55,7 +55,7 @@ public class cliente extends Personas {
     
     @Override
     public String toString() {
-        return "cliente{" + "presupuesto=" + presupuesto + ", primer_prdocto=" + primer_prdocto + ", cantidad_productos=" + cantidad_productos + '}';
+        return super.toString()+"cliente{" + "presupuesto=" + presupuesto + ", primer_prdocto=" + primer_prdocto + ", cantidad_productos=" + cantidad_productos + '}';
     }
 
 }

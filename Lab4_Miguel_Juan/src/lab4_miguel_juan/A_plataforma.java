@@ -6,14 +6,38 @@
 package lab4_miguel_juan;
 
 import java.util.Random;
+import java.util.ArrayList;
 
 /**
  *
  * @author HP
  */
-public class A_plataforma extends Complejo{
+public class A_plataforma extends Complejo {
 
-   @Override
+    private int numeroPersonas;
+
+    public A_plataforma() {
+    }
+
+    public A_plataforma(int numeroPersonas, ArrayList empleados, ArrayList productos, double tamaño, double altura, ArrayList clientes) {
+        super(empleados, productos, tamaño, altura, clientes);
+        this.numeroPersonas = numeroPersonas;
+    }
+
+    public int getNumeroPersonas() {
+        return numeroPersonas;
+    }
+
+    public void setNumeroPersonas(int numeroPersonas) {
+        this.numeroPersonas = numeroPersonas;
+    }
+
+    @Override
+    public String toString() {
+        return "A_plataforma{" + "numeroPersonas=" + numeroPersonas + '}';
+    }
+
+    @Override
     public String[][] cifrado_riel(String contraseña) {
         int contador = 0;
         String[][] incriptado = new String[contraseña.length() - 1][contraseña.length()];
@@ -120,6 +144,5 @@ public class A_plataforma extends Complejo{
         }
         return cad_final;
     }
-    private int numeroPersonas;
     
 }

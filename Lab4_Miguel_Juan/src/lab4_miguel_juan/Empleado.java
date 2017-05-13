@@ -31,7 +31,7 @@ public class Empleado extends Personas {
 
     @Override
     public String toString() {
-        return "Empleado{" + "sueldo=" + sueldo + '}';
+        return super.toString()+"Empleado{" + "sueldo=" + sueldo + '}';
     }
 
 }

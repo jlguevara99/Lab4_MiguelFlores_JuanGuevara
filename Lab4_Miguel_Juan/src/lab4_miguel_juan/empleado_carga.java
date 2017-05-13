@@ -59,7 +59,7 @@ public class empleado_carga extends Empleado {
 
     @Override
     public String toString() {
-        return "empleado_carga{" + "hora_entrada=" + hora_entrada + ", hora_salida=" + hora_salida + ", inicio_trabajo=" + inicio_trabajo + '}';
+        return super.toString()+"empleado_carga{" + "hora_entrada=" + hora_entrada + ", hora_salida=" + hora_salida + '}';
     }
 
 }

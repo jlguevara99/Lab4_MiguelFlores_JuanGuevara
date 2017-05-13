@@ -6,6 +6,7 @@
 package lab4_miguel_juan;
 
 import java.util.Random;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,6 +15,32 @@ import java.util.Random;
 public class A_regionales extends Complejo{
 
     private String nombre;
+
+    public A_regionales() {
+    }
+
+    public A_regionales(String nombre, ArrayList empleados, ArrayList productos, double tamaño, double altura, ArrayList clientes) {
+        super(empleados, productos, tamaño, altura, clientes);
+        this.nombre = nombre;
+    }
+
+    
+
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "A_regionales{" + "nombre=" + nombre + '}';
+    }
+    
     
       @Override
     public String[][] cifrado_riel(String contraseña) {
