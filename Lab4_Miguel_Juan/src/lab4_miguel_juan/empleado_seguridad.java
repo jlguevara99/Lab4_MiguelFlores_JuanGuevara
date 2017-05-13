@@ -40,7 +40,7 @@ private String dia;
 
     @Override
     public String toString() {
-        return "empleado_seguridad{" + "clave=" + clave + ", dia=" + dia + '}';
+        return super.toString()+"empleado_seguridad{" + "clave=" + clave + ", dia=" + dia + '}';
     }
 
     

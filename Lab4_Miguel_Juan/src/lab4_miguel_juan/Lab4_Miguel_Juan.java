@@ -43,8 +43,11 @@ public class Lab4_Miguel_Juan {
             System.out.println("5. Eliminar empleado");
             System.out.println("6. Eliminar cliente");
             System.out.println("7. Modificar Producto");
-            System.out.println("8. Eliminar Poducto");
-            System.out.println("9. Salir");
+            System.out.println("8. Eliminar Producto");
+            System.out.println("9. Eliminar almacen");
+            System.out.println("10. Listar");
+            System.out.println("11. Transeferir");
+            System.out.println("12. Salir");
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
@@ -163,7 +166,30 @@ public class Lab4_Miguel_Juan {
                         System.out.println("3. almacenes plataforma");
                         System.out.println("4. almacenes temporales");
                         
+                        int planta = sc.nextInt();
+                        switch (planta) {
+                            case 1:
+                                System.out.println("numero de plantas");
+                                int plantas = sc.nextInt();
+                                almacenes.add(new A_planta());
+                                break;
+                            case 2:
+                                System.out.println("Nombre del departamento");
+                                sc.nextLine();
+                                String nombre = sc.nextLine();
+                                almacenes.add(new A_regionales(nombre,empleados,productos,tam,alt,clientes));
+                                break;
+                            case 3:
+                                System.out.println("Numero de personas");
+                                int per = sc.nextInt();
+                                almacenes.add(new A_plataforma(per,empleados,productos,tam,alt,clientes));
+                                break;
+                            case 4:
+                                almacenes.add(new A_temporal(empleados,productos,empleados,productos,tam,alt,clientes));
+                                break;
+                        }
                     } catch (Exception e) {
+                        System.out.println("Incorrecto");
                     }
 
                     break;
@@ -202,7 +228,7 @@ public class Lab4_Miguel_Juan {
                                 empleados.get(pos).setAltura(altura);
                                 break;
                             case 5:
-                                System.out.println("Nueva peso");
+                                System.out.println("Nuevo peso");
                                 altura = sc.nextDouble();
                                 empleados.get(pos).setPeso(altura);
                                 break;
@@ -227,7 +253,7 @@ public class Lab4_Miguel_Juan {
                         int posicion = sc.nextInt();
                         empleados.remove(posicion);
 
-                    } catch (InputMismatchException e) {
+                    } catch (Exception e) {
                         System.out.println("ES INCORRECTO");
                     }
                     break;
@@ -238,7 +264,7 @@ public class Lab4_Miguel_Juan {
                         int posicion = sc.nextInt();
                         clientes.remove(posicion);
 
-                    } catch (InputMismatchException e) {
+                    } catch (Exception e) {
                         System.out.println("ES INCORRECTO");
                     }
                     break;
@@ -298,14 +324,62 @@ public class Lab4_Miguel_Juan {
                         int pos = sc.nextInt();
                         productos.remove(pos);
 
-                    } catch (InputMismatchException e) {
+                    } catch (Exception e) {
                         System.out.println("ES INCORRECTO");
                     }
                     break;
+                case 9:
+                    try {
+                        System.out.println("Eliminar almacen");
+                        System.out.println("Ingrese la posicion: ");
+                        int pos = sc.nextInt();
+                        almacenes.remove(pos);
+                    } catch (Exception e) {
+                        System.out.println("Incorrecto");
+                    }
+                    break;
+                case 10:
+                    System.out.println("que desea listar?");
+                    System.out.println("1. empleados");
+                    System.out.println("2. clientes");
+                    System.out.println("3. almacenes");
+                    int var = sc.nextInt();
+                    switch (var) {
+                        case 1:
+                            for (Empleado t : empleados) {
+                                System.out.println(empleados.indexOf(t)+". "+t);
+                            }
+                            break;
+                        case 2:
+                            for (cliente t : clientes) {
+                                System.out.println(clientes.indexOf(t)+". "+t);
+                            }
+                            break;
+                        case 3:
+                            for (Complejo t : almacenes) {
+                                System.out.println(almacenes.indexOf(t)+". "+t);
+                            }
+                            break;
+                        
+                            
+                    }
+                    break;
+                case 11:
 
+                    try {
+                        System.out.println("Ingrese la posicion del almacen del cual desea transeferir");
+                        int pos = sc.nextInt();
+                        System.out.println("Ingrese la posicion del almacen al cual desea transferir los datos");
+                        int pos2 = sc.nextInt();
+                        almacenes.get(pos).setEmpleados(almacenes.get(pos2).getEmpleados());
+                        almacenes.get(pos).setProductos(almacenes.get(pos2).getProductos());
+                        
+                    } catch (Exception e) {
+                        System.out.println("Incorrecto");
+                    }
             }
 
-        } while (opcion != 9);
+        } while (opcion != 12);
 
     }
 
