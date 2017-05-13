@@ -71,19 +71,14 @@ public abstract class Complejo {
     public String toString() {
         return "Complejo{" + "empleados=" + empleados + ", productos=" + productos + ", tama\u00f1o=" + tamaño + ", altura=" + altura + ", clientes=" + clientes + '}';
     }
+//metodos abstractos
 
-    public abstract String[][] cifrado_riel();
+    public abstract String[][] cifrado_riel(String contraseña);
 
-    public abstract String[][] cifrado_transposicion();
+    public abstract String[][] cifrado_transposicion(String clave, String contraseña);
 
-    public abstract String convercion_cadena_invercion();
+    public abstract String convercion_cadena_invercion(String clave, String contraseña);
 
-    public abstract double cifrado_vigenere();///
-
-    public abstract String adelantar_posiciones();
-
-    public abstract String[][] encriptacion_matrices();
-
-    public abstract String declaracion_alfabeto();
+    public abstract String adelantar_posiciones(String contraseña);
 
 }
